@@ -1,0 +1,59 @@
+
+
+//-
+    Creates a collapsible instruction.
+
+    +instructions("Do this now")(class="hidden-files")
+      | The text of the instructions
+//-
+mixin instructions(heading)
+    details 
+        summary(class!=attributes.class)= heading
+        pre 
+            block
+
+//-
+    Creates a new mod card.
+
+    +mod("Test", "https://test.com")(class="fo3")
+//-
+mixin mod(modName, href)
+    article.mod 
+        header
+            h1.name 
+                a(class!=attributes.class href=href)= modName
+        block
+
+//-
+    Creates a details list.
+
+    +details()
+        +author("Modder")
+        +version("1.23")
+//-
+mixin details()
+    dl 
+        block 
+
+
+//-
+    Adds author to the details list.
+
+    +details()
+        +author("Modder")
+//-
+mixin author(name)
+    dt Author 
+    dd=name 
+
+
+//-
+    Adds version to the details list.
+
+    +details()
+        +version("1.23")
+//-
+mixin version(version)
+    dt Version
+    dd=version
+

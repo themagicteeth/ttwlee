@@ -1,0 +1,74 @@
+html {
+    background-color: #0a1919;
+    width: 60%;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+dt {
+    font-weight: bold;
+    grid-column-start: 1;
+}
+
+dt::after {
+    content: ":";
+}
+
+dd {
+    grid-column-start: 2;
+}
+
+
+.mod {
+    background-color: #91a6bb;
+}
+
+.mod dl {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.mod .name {
+    background-color: #2f4f4f;
+    padding: .5em;
+}
+
+.fo3 {
+    color: #74fc39;
+}
+
+pre {
+    background-color: lightgray;
+    white-space: pre-line;
+}
+
+
+summary {
+    padding: 5px;
+}
+
+details {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+summary,
+details pre {
+    box-shadow: 2px 3px 3px 0 rgba(41, 41, 41, 0.3)
+}
+
+details pre {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.hidden-files {
+    background-color: #4597de;
+}
